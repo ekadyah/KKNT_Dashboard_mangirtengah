@@ -1,4 +1,8 @@
-<form class="" action="<?php echo site_url('Umkm/save') ?>" method="post">
+<form 
+cass="" 
+enctype="multipart/form-data"
+action="<?php echo site_url('Umkm/save') ?>" 
+method="post">
 
     <label>Nama Usaha</label><br>
     <input type="text" name="nama_perusahaan" value="">
@@ -16,7 +20,7 @@
     </p>
 
     <label>Foto</label><br>
-    <input type="text" name="foto" value="">
+    <input type="file" name="foto_umkm" id="foto_umkm" value="">
     <p>
     </p>
 

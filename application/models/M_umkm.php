@@ -34,4 +34,11 @@ class M_umkm extends CI_Model
         $this->db->where($data);
         return $this->db->delete($this->table);
     }
+
+    public function search($data){
+        $this->db->like($this->pk, $data);
+        $this->db->or_like('nama_perusahaan', $data);
+        $this->db->or_like('pemilik',$data);
+        return $this->db->get($this->table);
+    }
 }
