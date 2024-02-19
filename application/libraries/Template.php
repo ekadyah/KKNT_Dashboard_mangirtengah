@@ -1,11 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-  </head>
-  <body>
-    <h1>KKN</h1>
-  </body>
-</html>
+<?php
+class Template
+{
+    var $template_data = array();
+    function set($name, $value)
+    {
+        $this->template_data[$name] = $value;
+    }
+    
+    function load($template = '', $view = '', $view_data = array(), $return = FALSE)
+    {
+        $this->CI =& get_instance();
+        $this->set('contents', $this->CI->load->view($view, $view_data, TRUE));
+        return $this->CI->load->view($template, $this->template_data, $return);
+    }
+}
+?>
