@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <h2>Halaman Beranda</h2>
+    <h2>KKN T 2024/h2>
 </body>
 
 </html>
